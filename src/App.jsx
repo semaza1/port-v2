@@ -4,6 +4,7 @@ import Navbar from '@/components/layout/Navbar';
 import Footer from '@/components/layout/Footer';
 import Home   from '@/pages/Home';
 import Resume from '@/pages/Resume';
+import Academics from '@/pages/Academics';
 
 // Page transition wrapper — wraps each route's content
 function PageWrapper({ children }) {
@@ -36,6 +37,14 @@ export default function App() {
             element={
               <PageWrapper>
                 <Resume />
+              </PageWrapper>
+            }
+          />
+          <Route
+            path="/academics"
+            element={
+              <PageWrapper>
+                <Academics />
               </PageWrapper>
             }
           />
