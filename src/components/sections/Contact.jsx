@@ -9,7 +9,7 @@ const SOCIAL_LINKS = [
   {
     id:      'github',
     label:   'GitHub',
-    handle:  '@emmanuelsemaza',
+    handle:  '@semaza1',
     href:    'https://github.com/semaza1',
     icon:    <Github size={18} />,
     desc:    'See my code and open-source work',
@@ -106,7 +106,7 @@ function SocialCard({ label, handle, href, icon, desc, color, colorBg }) {
         style={{ background: colorBg, borderColor: color + '30', color }}
       >
         {icon}
-      </div>F
+      </div>
 
       {/* Text */}
       <div className="flex-1 min-w-0">
@@ -171,7 +171,7 @@ export default function Contact() {
             <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-3 mb-6">
               <Button
                 as="a"
-                href="mailto:emmanuelsemaza@gmail.com"
+                href="mailto:semazaemmanuel@gmail.com"
                 variant="primary"
                 size="lg"
                 iconRight={<ArrowRight size={16} />}
