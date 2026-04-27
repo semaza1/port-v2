@@ -265,38 +265,6 @@ export default function Skills() {
               </motion.div>
             </div>
 
-            {/* Currently learning / building
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="rounded-2xl border border-accent/20 bg-accent/5 p-6"
-            >
-              <div className="flex items-center gap-2 mb-4">
-                <span className="w-2 h-2 rounded-full bg-accent animate-pulse-slow" aria-hidden="true" />
-                <p className="font-mono text-[10px] uppercase tracking-widest text-accent">
-                  Currently deepening
-                </p>
-              </div>
-              <div className="flex flex-col gap-3">
-                {[
-                  { name: 'TypeScript',         note: 'Type-safe full-stack apps'       },
-                  { name: 'Payment Integration', note: 'Stripe, Flutterwave, MTN MoMo'  },
-                  { name: 'Video Streaming',     note: 'HLS, adaptive bitrate delivery' },
-                  { name: 'System Design',       note: 'Scalable architecture patterns' },
-                ].map(({ name, note }) => (
-                  <div key={name} className="flex items-start gap-3">
-                    <span className="mt-1.5 w-1 h-1 rounded-full bg-accent/50 flex-shrink-0" aria-hidden="true" />
-                    <div>
-                      <p className="font-mono text-xs font-medium text-text-primary">{name}</p>
-                      <p className="text-xs text-text-tertiary">{note}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div> */}
-
           </div>
         </div>
 
