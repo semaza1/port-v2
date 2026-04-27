@@ -1,37 +1,145 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- Character encoding -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/semaza.jpg" />
+
+    <!-- Website favicon -->
+    <link rel="icon" type="image/jpg" href="/semaza.jpg" />
+
+    <!-- Mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- SEO -->
-    <meta name="description" content="Emmanuel Semaza — Full-Stack Developer from Rwanda building scalable software products across education, commerce, and operational systems." />
-    <meta name="keywords" content="Emmanuel Semaza, Full-Stack Developer, Rwanda, React, Node.js, MongoDB, Software Engineer" />
+    <!-- ===================================================== -->
+    <!-- PRIMARY SEO META TAGS -->
+    <!-- Helps Google understand your website -->
+    <!-- ===================================================== -->
+
+    <!-- Main title shown in Google search results -->
+    <title>Emmanuel Semaza — Full-Stack Developer</title>
+
+    <!-- Short description shown in search results -->
+    <meta
+      name="description"
+      content="Emmanuel Semaza is a Full-Stack Developer from Rwanda building scalable software products across education, commerce, and operational systems."
+    />
+
+    <!-- Keywords (less important today, but okay to include) -->
+    <meta
+      name="keywords"
+      content="Emmanuel Semaza, Full-Stack Developer Rwanda, React Developer, Node.js Developer, MERN Stack Developer, Software Engineer Rwanda"
+    />
+
+    <!-- Site author -->
     <meta name="author" content="Emmanuel Semaza" />
 
-    <!-- Open Graph -->
-    <meta property="og:type"        content="website" />
-    <meta property="og:title"       content="Emmanuel Semaza — Full-Stack Developer" />
-    <meta property="og:description" content="Building full-stack products that solve real-world problems." />
-    <meta property="og:url"         content="https://emmanuelsemaza.dev" />
+    <!-- Prevent duplicate content issues -->
+    <link
+      rel="canonical"
+      href="https://semazaemmanuel.vercel.app/"
+    />
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card"        content="summary_large_image" />
-    <meta name="twitter:title"       content="Emmanuel Semaza — Full-Stack Developer" />
-    <meta name="twitter:description" content="Building full-stack products that solve real-world problems." />
-
-    <!-- Preconnect to Google Fonts for faster load -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
-    <!-- Theme color for mobile browsers -->
+    <!-- Theme color for mobile browser -->
     <meta name="theme-color" content="#0A0A0A" />
 
-    <title>Emmanuel Semaza — Full-Stack Developer</title>
+    <!-- ===================================================== -->
+    <!-- OPEN GRAPH TAGS -->
+    <!-- Controls how your website appears when shared -->
+    <!-- on LinkedIn, WhatsApp, Facebook, etc -->
+    <!-- ===================================================== -->
+
+    <meta property="og:type" content="website" />
+
+    <meta
+      property="og:title"
+      content="Emmanuel Semaza — Full-Stack Developer"
+    />
+
+    <meta
+      property="og:description"
+      content="Building full-stack products that solve real-world problems."
+    />
+
+    <!-- Your actual deployed website URL -->
+    <meta
+      property="og:url"
+      content="https://semazaemmanuel.vercel.app"
+    />
+
+    <!-- Add a preview image inside public folder -->
+    <!-- Example: public/preview.png -->
+    <meta
+      property="og:image"
+      content="https://semazaemmanuel.vercel.app/preview.png"
+    />
+
+    <!-- ===================================================== -->
+    <!-- TWITTER/X CARD TAGS -->
+    <!-- Controls preview when shared on X -->
+    <!-- ===================================================== -->
+
+    <meta
+      name="twitter:card"
+      content="summary_large_image"
+    />
+
+    <meta
+      name="twitter:title"
+      content="Emmanuel Semaza — Full-Stack Developer"
+    />
+
+    <meta
+      name="twitter:description"
+      content="Building full-stack products that solve real-world problems."
+    />
+
+    <meta
+      name="twitter:image"
+      content="https://semazaemmanuel.vercel.app/preview.png"
+    />
+
+    <!-- ===================================================== -->
+    <!-- PERFORMANCE OPTIMIZATION -->
+    <!-- Faster Google fonts loading -->
+    <!-- ===================================================== -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+
+    <!-- ===================================================== -->
+    <!-- STRUCTURED DATA (VERY IMPORTANT FOR GOOGLE) -->
+    <!-- Helps Google identify you as a person/developer -->
+    <!-- Replace GitHub/LinkedIn links with your actual ones -->
+    <!-- ===================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Emmanuel Semaza",
+        "url": "https://semazaemmanuel.vercel.app",
+        "jobTitle": "Full-Stack Developer",
+        "address": {
+          "@type": "PostalAddress",
+          "addressCountry": "Rwanda"
+        },
+        "sameAs": [
+          "https://github.com/semaza1",
+          "https://linkedin.com/in/"
+        ]
+      }
+    </script>
   </head>
+
   <body>
+    <!-- React app mounts here -->
     <div id="root"></div>
+
+    <!-- Main React entry file -->
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

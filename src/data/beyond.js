@@ -12,7 +12,7 @@ export const CERTIFICATIONS = [
     category: 'Frontend',
     color:    '#3B82F6',
     link:     null,   // replace with your certificate URL
-    image:    null,   // replace with certificate image path
+    image:    '/assets/certs/Free code camp Certificate.png',   // replace with certificate image path
   },
   {
     id:       'cert-2',
