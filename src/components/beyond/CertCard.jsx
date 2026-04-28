@@ -13,65 +13,86 @@ export default function CertCard({ cert, index }) {
       whileHover={{ y: -3 }}
       className="group relative flex flex-col rounded-2xl border border-border bg-bg-secondary overflow-hidden hover:border-border-strong transition-all duration-300"
     >
-      {/* Image / placeholder area */}
+      {/* ── Image area ── */}
       <div
-        className="relative h-36 flex items-center justify-center overflow-hidden"
-        style={{ background: `linear-gradient(135deg, ${color}12 0%, rgba(10,10,10,0.5) 100%)` }}
+        className="relative overflow-hidden flex items-center justify-center"
+        style={{
+          /* Tall enough for landscape certificate screenshots */
+          height: '200px',
+          background: `linear-gradient(135deg, ${color}14 0%, rgba(10,10,10,0.6) 100%)`,
+        }}
       >
         {image ? (
+          /*
+           * object-cover   → always fills the box, no letter-boxing
+           * object-top     → anchors to the top of the image so the
+           *                   title/header of the certificate is always
+           *                   visible even if the bottom is cropped
+           * group-hover:scale-105 → subtle zoom on card hover
+           */
           <img
             src={image}
             alt={`${title} certificate`}
-            className="absolute inset-0 w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
+            className="absolute inset-0 w-full h-full transition-transform duration-500 group-hover:scale-105"
+            style={{
+              objectFit:      'cover',
+              objectPosition: 'top center',
+            }}
             loading="lazy"
           />
         ) : (
+          /* Placeholder — shown when no image is provided yet */
           <>
-            {/* Grid pattern */}
             <div
               className="absolute inset-0"
               style={{
-                backgroundImage: `linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                                  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)`,
+                backgroundImage: `
+                  linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+                  linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px)
+                `,
                 backgroundSize: '24px 24px',
               }}
               aria-hidden="true"
             />
-            {/* Icon */}
             <div
-              className="relative z-10 flex items-center justify-center w-14 h-14 rounded-2xl border"
+              className="relative z-10 flex items-center justify-center w-16 h-16 rounded-2xl border"
               style={{ background: color + '18', borderColor: color + '30', color }}
             >
-              <Award size={24} />
+              <Award size={28} />
             </div>
           </>
         )}
 
-        {/* Category pill */}
+        {/* Dark scrim over image so badges are always readable */}
+        {image && (
+          <div
+            className="absolute inset-0 bg-gradient-to-t from-bg-secondary/80 via-transparent to-transparent pointer-events-none"
+            aria-hidden="true"
+          />
+        )}
+
+        {/* Category pill — top left */}
         <div className="absolute top-3 left-3 z-10">
           <span
-            className="font-mono text-[10px] font-medium px-2.5 py-1 rounded-full border backdrop-blur-sm"
-            style={{ color, background: 'rgba(10,10,10,0.7)', borderColor: color + '35' }}
+            className="font-mono text-[10px] font-medium px-2.5 py-1 rounded-full border backdrop-blur-md"
+            style={{
+              color,
+              background:  'rgba(10,10,10,0.72)',
+              borderColor: color + '40',
+            }}
           >
             {category}
           </span>
         </div>
 
-        {/* Year pill */}
+        {/* Year pill — top right */}
         <div className="absolute top-3 right-3 z-10">
-          <span className="font-mono text-[10px] px-2.5 py-1 rounded-full border bg-black/60 border-border text-text-tertiary backdrop-blur-sm">
+          <span className="font-mono text-[10px] px-2.5 py-1 rounded-full border bg-black/65 border-border/60 text-text-tertiary backdrop-blur-md">
             {year}
           </span>
         </div>
 
-        {/* Bottom fade */}
-        <div
-          className="absolute bottom-0 left-0 right-0 h-12 pointer-events-none"
-          style={{ background: 'linear-gradient(to top, #111111, transparent)' }}
-          aria-hidden="true"
-        />
-
-        {/* Accent line on hover */}
+        {/* Coloured accent line sweeps on hover */}
         <div
           className="absolute bottom-0 left-0 h-px w-0 group-hover:w-full transition-all duration-500"
           style={{ background: `linear-gradient(90deg, transparent, ${color}, transparent)` }}
@@ -79,27 +100,28 @@ export default function CertCard({ cert, index }) {
         />
       </div>
 
-      {/* Body */}
+      {/* ── Card body ── */}
       <div className="flex flex-col flex-1 p-4">
         <h3 className="font-heading font-semibold text-sm text-text-primary mb-1 leading-snug group-hover:text-accent transition-colors duration-200">
           {title}
         </h3>
         <p className="font-mono text-xs text-text-tertiary mb-4 flex-1">{issuer}</p>
 
-        {/* Link */}
         {link ? (
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-xs font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded"
+            className="inline-flex items-center gap-1.5 text-xs font-medium transition-colors duration-150 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent rounded w-fit"
             style={{ color }}
           >
             <ExternalLink size={12} />
             View Certificate
           </a>
         ) : (
-          <span className="text-xs text-text-tertiary font-mono italic">Certificate available on request</span>
+          <span className="text-xs text-text-tertiary font-mono italic">
+            Certificate available on request
+          </span>
         )}
       </div>
     </motion.div>

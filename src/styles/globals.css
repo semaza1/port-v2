@@ -325,3 +325,12 @@ img, video {
     pointer-events: none;
   }
 }
+
+/* ── Custom cursor — hide native cursor on non-touch devices ── */
+@media (pointer: fine) {
+  *,
+  *::before,
+  *::after {
+    cursor: none !important;
+  }
+}
