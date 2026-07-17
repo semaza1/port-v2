@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { ChevronLeft, ChevronRight, Github } from 'lucide-react';
+import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import SectionHeader from '@/components/ui/SectionHeader';
 import ProjectCard   from '@/components/ui/ProjectCard';
 import Button        from '@/components/ui/Button';
@@ -100,13 +101,11 @@ export default function Projects() {
             <div className="w-px h-6 bg-border mx-1" aria-hidden="true" />
 
             <Button
-              as="a"
-              href="https://github.com/emmanuelsemaza"
-              target="_blank"
-              rel="noopener noreferrer"
+              as={Link}
+              to="/projects"
               variant="secondary"
               size="sm"
-              iconLeft={<Github size={14} />}
+              iconRight={<ArrowRight size={14} />}
             >
               All Projects
             </Button>

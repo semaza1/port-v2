@@ -6,6 +6,7 @@ import CustomCursor from '@/components/ui/CustomCursor';
 import Home         from '@/pages/Home';
 import Resume       from '@/pages/Resume';
 import BeyondCode   from '@/pages/BeyondCode';
+import Projects     from '@/pages/Projects';
 
 function PageWrapper({ children }) {
   return <main className="flex-1 pt-16">{children}</main>;
@@ -25,6 +26,7 @@ export default function App() {
         <AnimatePresence mode="wait" initial={false}>
           <Routes location={location} key={location.pathname}>
             <Route path="/"            element={<PageWrapper><Home /></PageWrapper>} />
+            <Route path="/projects"    element={<PageWrapper><Projects /></PageWrapper>} />
             <Route path="/resume"      element={<PageWrapper><Resume /></PageWrapper>} />
             <Route path="/beyond-code" element={<PageWrapper><BeyondCode /></PageWrapper>} />
             <Route path="*" element={

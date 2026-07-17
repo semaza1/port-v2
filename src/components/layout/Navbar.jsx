@@ -40,7 +40,7 @@ const BEYOND_ITEMS = [
 const NAV_LINKS = [
   { label: 'Home',     to: '/',          end: true  },
   { label: 'About',    to: '/#about',    end: false },
-  { label: 'Projects', to: '/#projects', end: false },
+  { label: 'Projects', to: '/projects',  end: true  },
   { label: 'Resume',   to: '/resume',    end: true  },
   { label: 'Contact',  to: '/#contact',  end: false },
 ];
@@ -409,7 +409,7 @@ export default function Navbar() {
               <div className="hidden md:block">
                 <Button
                   as="a"
-                  href="mailto:semazaemmanuel@gmail.com"
+                  href="mailto:semazaemmannuel@gmail.com"
                   variant="primary"
                   size="sm"
                   iconRight={
@@ -597,7 +597,7 @@ export default function Navbar() {
               <div className="px-4 py-6 border-t border-border">
                 <Button
                   as="a"
-                  href="mailto:semazaemmanuel@gmail.com"
+                  href="mailto:semazaemmannuel@gmail.com"
                   variant="primary"
                   size="md"
                   className="w-full"
@@ -610,7 +610,7 @@ export default function Navbar() {
                   Let's Talk
                 </Button>
                 <p className="mt-3 text-center text-xs text-text-tertiary font-mono">
-                  semazaemmanuel@gmail.com
+                  semazaemmannuel@gmail.com
                 </p>
               </div>
             </motion.div>

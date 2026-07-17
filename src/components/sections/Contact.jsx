@@ -29,8 +29,8 @@ const SOCIAL_LINKS = [
   {
     id:      'email',
     label:   'Email',
-    handle:  'semazaemmanuel@gmail.com',
-    href:    'mailto:semazaemmanuel@gmail.com',
+    handle:  'semazaemmannuel@gmail.com',
+    href:    'mailto:semazaemmannuel@gmail.com',
     icon:    <Mail size={18} />,
     desc:    'Best for project inquiries',
     color:   '#3B82F6',
@@ -52,7 +52,7 @@ const fadeUp = {
 /* ─── Email copy button ───────────────────────────────────── */
 function CopyEmail() {
   const [copied, setCopied] = useState(false);
-  const EMAIL = 'semazaemmanuel@gmail.com';
+  const EMAIL = 'semazaemmannuel@gmail.com';
 
   const handleCopy = async () => {
     try {
@@ -171,7 +171,7 @@ export default function Contact() {
             <motion.div variants={fadeUp} className="flex flex-wrap items-center gap-3 mb-6">
               <Button
                 as="a"
-                href="mailto:semazaemmanuel@gmail.com"
+                href="mailto:semazaemmannuel@gmail.com"
                 variant="primary"
                 size="lg"
                 iconRight={<ArrowRight size={16} />}

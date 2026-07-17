@@ -511,8 +511,8 @@ export default function Resume() {
                   {[
                     { icon: <MapPin size={12} />,    text: 'Kicukiro, Kigali, Rwanda' },
                     { icon: <Phone size={12} />,     text: '+250 798 721 418',         href: 'tel:+250798721418' },
-                    { icon: <Mail size={12} />,      text: 'semazaemmanuel@gmail.com', href: 'mailto:semazaemmanuel@gmail.com' },
-                    { icon: <Github size={12} />,    text: 'github.com/emmanuelsemaza', href: 'https://github.com/semaza1' },
+                    { icon: <Mail size={12} />,      text: 'semazaemmannuel@gmail.com', href: 'mailto:semazaemmannuel@gmail.com' },
+                    { icon: <Github size={12} />,    text: 'github.com/semaza1', href: 'https://github.com/semaza1' },
                     { icon: <Linkedin size={12} />,  text: 'linkedin.com/in/emmanuelsemaza', href: 'https://linkedin.com/in/emmanuelsemaza' },
                   ].map(({ icon, text, href }) =>
                     href ? (
@@ -767,7 +767,7 @@ export default function Resume() {
             <div className="flex items-center gap-3 flex-shrink-0">
               <Button
                 as="a"
-                href="mailto:semazaemmanuel@gmail.com"
+                href="mailto:semazaemmannuel@gmail.com"
                 variant="primary"
                 size="md"
                 iconRight={<Mail size={14} />}

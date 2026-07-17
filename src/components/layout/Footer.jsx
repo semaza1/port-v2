@@ -15,7 +15,7 @@ const SOCIAL_LINKS = [
   },
   {
     label: 'Email',
-    href:  'mailto:semazaemmanuel@gmail.com',
+    href:  'mailto:semazaemmannuel@gmail.com',
     icon:  <Mail size={16} />,
   },
 ];
