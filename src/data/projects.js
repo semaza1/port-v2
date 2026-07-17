@@ -102,6 +102,39 @@ export const PROJECTS = [
     colorMuted: 'rgba(16,185,129,0.08)',
     colorBorder: 'rgba(16,185,129,0.2)',
   },
+
+  {
+    id: 'clinic-consultation',
+    title: 'Clinic Consultation',
+    category: 'Healthcare',
+    description:
+      'A  system for Ktelles Company — handling management, tracking ,and sales with precision and reliability.',
+    tech: ['PHP', 'MySQL', 'JavaScript', 'Bootstrap', 'HTML/CSS'],
+    image: new URL('../assets/projects/clinic-consultation.png', import.meta.url).href,
+    liveUrl: null,
+    githubUrl: 'https://github.com/semaza1/clinic',
+    status: 'completed',
+    featured: false,
+    color: '#10B981',
+    colorMuted: 'rgba(16,185,129,0.08)',
+    colorBorder: 'rgba(16,185,129,0.2)',
+  }, {
+    id: 'movie-app',
+    title: 'Movie App',
+    category: 'Entertainment',
+    description:
+      'A movie application that allows users to search for movies and view details about them.',
+    tech: ['React.js', 'Node.js', 'MongoDB', 'Express.js', 'Tailwind CSS'],
+    image: new URL('../assets/projects/movie-app.png', import.meta.url).href,
+    liveUrl: 'http://movie-app-ten-teal.vercel.app/',
+    githubUrl: 'https://github.com/semaza1/movie-app',
+    status: 'live',
+    featured: false,
+    color: '#10B981',
+    colorMuted: 'rgba(16,185,129,0.08)',
+    colorBorder: 'rgba(16,185,129,0.2)',
+  },
+
 ];
 
 export const FEATURED = PROJECTS.filter((p) => p.featured);
